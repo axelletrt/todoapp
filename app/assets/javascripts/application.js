@@ -35,19 +35,87 @@ $(document).ready(function(){
 
     })
 
-    function showModal(){
+    function showModal(type){
         $(".modals").removeClass("hide")
+
+        if (type=="login"){
+            $(".js-signup").addClass("hide"); 
+            $(".js-login").removeClass("hide")
+        } else if (type=="signup"){
+            $(".js-login").addClass("hide"); 
+            $(".js-signup").removeClass("hide"); 
+        }
     }
 
-    function addModal(){
+    function hideModal(){
         $(".modals").addClass("hide")
     }
 
     $(".login").click(function(e){
         e.preventDefault()
-        showModal()
+        showModal("login")
     })
 
+    $(".signup").click(function(e){
+        e.preventDefault()
+        showModal("signup")
+    })
+
+    $(".modals").click(function(e){
+
+        if (!$(e.target).closest("#modal-content").length){
+            hideModal()
+        }
+    })
+    
+
+    let i = 0;
+    
+    $("#carousel img").hide();
+    $("#carousel img").first().show();
+  
+
+    function next() {
+      i++;
+      if (i > $("#carousel img").length-1) {
+        i = 0;
+      };
+      $("#carousel img").hide();
+      $("#carousel img").eq(i).show();
+
+    };
+  
+    function prev() {
+      i--;
+      if (i < 0) {
+        i = $("#carousel img").length-1;
+      };
+      $("#carousel img").hide();
+      $("#carousel img").eq(i).show();
+      
+    };
+  
+    function goTo(int) {
+      i = int;
+      $("#carousel img").hide();
+      $("#carousel img").eq(i).show();
+      
+
+    };
+    
+    $("#prev").click(function () {
+      prev();
+    });
+    
+    $("#next").click(function () {
+      next();
+    });
+    
+
+    
+    setInterval(function(){
+          next();
+      },2000);
 
 
 }) 

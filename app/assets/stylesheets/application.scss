@@ -4,3 +4,9 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "components/*";
+
+
+#tab li {
+  display: flex; 
+  flex-wrap: nowrap; 
+}

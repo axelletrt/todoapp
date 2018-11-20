@@ -1,4 +1,5 @@
 <div class="modals hide">
+  <div id="modal-content" class="modals-inside">
   <div class="js-signup hide">
 
   <h2>Sign up</h2>
@@ -47,6 +48,7 @@
     </div>
   <% end %>
   </div> 
+  </div> 
 </div> 
 
 
@@ -73,15 +75,19 @@
   </ul>
 </div>
 
-<div class="container">
-  <div class="row">
+<div class="container carousel">
+  <div id="carousel" class="row">
     <% @tasks.each do |task|  %>
-      <div class="card col-3">
-        <% unless task.image.nil? %>
-          <%= image_tag task.image, class: "rounded-circle" %>
-        <% end %>
-      </div>
+    <div>
+      <% unless task.image.nil? %>
+      <%= image_tag task.image, class: "rounded-circle" %>
+      <% end %>
+    </div>
     <% end %>
+
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
   </div>
+
 </div>
 
