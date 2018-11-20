@@ -20,15 +20,35 @@
 //= require bootstrap-sprockets
 
 $(document).ready(function(){
-$("#tab>li").next().hide(); 
+    $("#tab>li").next().hide(); 
 
-$("#tab>li:first").next().show();
+    $("#tab>li:first").next().show();
 
-$("#tab>li").click(function(){
-$("#tab>li").next().hide(); 
-$(this).next().show(); 
+    $("#tab>li").click(function(){
+        $("#tab>li").next().hide(); 
+        $(this).next().show(); 
 
-}) 
+    }) 
+
+    $("#avatar").click(function(){
+        $(".js-dropdown").toggleClass("hide")
+
+    })
+
+    function showModal(){
+        $(".modals").removeClass("hide")
+    }
+
+    function addModal(){
+        $(".modals").addClass("hide")
+    }
+
+    $(".login").click(function(e){
+        e.preventDefault()
+        showModal()
+    })
+
+
 
 }) 
 

@@ -1,0 +1,24 @@
+.js-dropdown {
+    position: absolute; 
+    right: 0; 
+    top: 60px; 
+    background-color: pink; 
+    padding: 20px; 
+    border-radius: 6px;
+    z-index: 99; 
+}
+
+.js-dropdown ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.js-dropdown.hide {
+    display: none;
+}
+
+#avatar {
+    cursor: pointer;
+}
+
