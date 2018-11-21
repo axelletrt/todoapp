@@ -13,3 +13,5 @@ https://todoapp1000.herokuapp.com/
 PS : Quand je "pushais" j'avais une erreur de "Precompiling assets failed"
 
 Bonne correction :) 
+
+@axelletrt
