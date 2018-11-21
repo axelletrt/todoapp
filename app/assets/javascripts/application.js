@@ -116,7 +116,5 @@ $(document).ready(function(){
     setInterval(function(){
           next();
       },2000);
-
-
 }) 
 
